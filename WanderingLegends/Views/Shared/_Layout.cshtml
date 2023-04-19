@@ -1,13 +1,35 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>@ViewData["Title"]</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link href="/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
-<h1>Wandering Legends</h1>
-@RenderBody()
+
+<body style="background-color: #A58E74">
+<div class="container">
+  <div class="header">
+    <h1>Welcome to the world of Wavephoria</h1>
+  </div>
+
+  <div class="clearfix">
+    <div class="column menu">
+      @RenderSection("Menu", false)
+    </div>
+
+    <div class="column content">
+      @RenderBody()
+    </div>
+  </div>
+  <div class="clearfix">
+    <div class="footer">
+      <p>Jens Gustafsson</p>
+      <p>Made in 2023</p>
+    </div>
+  </div>
+</div>
+</body>
 
 </body>
 </html>

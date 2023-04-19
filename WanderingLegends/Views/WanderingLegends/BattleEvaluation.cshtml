@@ -1,0 +1,27 @@
+@model WanderingLegends.Views.WanderingLegends.GameStartVM
+
+@{
+    Layout = "_LayoutGame";
+}
+@section MenuStats
+{
+    <partial name="_HeroStats"/>
+}
+
+<p>Fight is over!</p>
+@if (Model.monster.Life <= 0)
+{
+    <p>You managed to kill the monster!</p>
+    <p>@Model.monster.Name has died</p>
+    <p>You earned some experience points and can now continue your journey</p>                           
+}
+@if (Model.monster.Life > 0)
+{
+    <p>It seems like you were no match for this enemy<br/>
+        You lose half of your coins but can venture on into the night<br/>
+        Next time, be more careful! </p>
+}
+@section Movement
+{
+    <partial name="_Movement"/>
+}

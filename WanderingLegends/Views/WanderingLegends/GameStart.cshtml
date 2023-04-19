@@ -1,0 +1,24 @@
+@model WanderingLegends.Views.WanderingLegends.GameStartVM
+
+@{
+    Layout = "_LayoutGame";
+}
+@section MenuStats
+{
+    <partial name="_HeroStats"/>
+}
+
+<p>Welcome to the world of Arnajak! @Model.hero.Name</p>
+
+
+
+@section Movement
+{
+    <partial name="_Movement" />
+}
+@* <p>You look around in the world and what you see around you is:</p> *@
+@* <p><a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X-1)" asp-route-y="@Model.hero.Y">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X-1, Model.hero.Y])</a> </p> *@
+@* <p><a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y+1)">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y +1])</a></p> *@
+@* <p><a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X+1)" asp-route-y="@Model.hero.Y">To the south you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X +1, Model.hero.Y])</a></p> *@
+@* <p><a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X-1)" asp-route-y="@(Model.hero.Y-1)">To the west you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y -1])</a></p> *@
+@* *@

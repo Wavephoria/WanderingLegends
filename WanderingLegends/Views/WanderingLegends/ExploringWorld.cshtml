@@ -1,0 +1,16 @@
+@{
+    Layout = "_LayoutGame";
+}
+@section MenuStats
+{
+    <partial name="_HeroStats"/>
+}
+
+<p>You are standing in @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y])</p>
+
+
+
+@section Movement
+{
+    <partial name="_Movement" />
+}

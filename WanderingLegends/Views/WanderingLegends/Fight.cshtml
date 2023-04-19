@@ -1,0 +1,21 @@
+@model WanderingLegends.Views.WanderingLegends.GameStartVM
+
+@{
+    Layout = "_LayoutGame";
+}
+@section MenuStats
+{
+    <partial name="_HeroStats"/>
+}
+
+<p>You look up and see</p>
+@Model.monster.Name<br/>
+@Model.monster.Life HP <br/>
+@Model.monster.Strength Strength <br/>
+<br/>
+
+<p>What do you want to?<br/>
+<a asp-controller="WanderingLegends" asp-action="BattleEvaluation">Fight</a><br/>
+<a asp-controller="WanderingLegends" asp-action="ExploringWorld">Run</a><br/>
+Use Item
+</p>

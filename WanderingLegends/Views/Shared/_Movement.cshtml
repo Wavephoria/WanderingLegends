@@ -1,0 +1,11 @@
+@model WanderingLegends.Views.WanderingLegends.GameStartVM
+
+<br/>
+<br/>
+<br/>
+<p>You take a glance around you:</p>
+<p><a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X-1)" asp-route-y="@Model.hero.Y">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X-1, Model.hero.Y])</a> </p>
+<p><a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y+1)">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y +1])</a></p>
+<p><a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X+1)" asp-route-y="@Model.hero.Y">To the south you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X +1, Model.hero.Y])</a></p>
+<p><a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X-1)" asp-route-y="@(Model.hero.Y-1)">To the west you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y -1])</a></p>
+

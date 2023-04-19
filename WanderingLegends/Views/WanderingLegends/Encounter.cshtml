@@ -1,0 +1,20 @@
+@model WanderingLegends.Views.WanderingLegends.GameStartVM
+
+@{
+    Layout = "_LayoutGame";
+}
+@section MenuStats
+{
+    <partial name="_HeroStats"/>
+}
+
+<strong>@Model.encounter.CheckEncounter(@Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y]))</strong>
+
+
+
+
+
+@section Movement
+{
+    <partial name="_Movement" />
+}

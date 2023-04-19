@@ -1,3 +1,17 @@
 @{
-    Layout = "_Layout";
+    Layout = "_layout";
 }
+@section Menu{
+    <ul>
+        <li>Own Projects</li>
+        <li><a asp-controller="WanderingLegends" asp-action="Main">Wandering Legends</a></li>
+        <li>Upcoming Ideas</li>
+        <li><a asp-controller="Home" asp-action="OtherProjects">Other Projects</a></li>
+        <li><a asp-controller="Home" asp-action="AboutMe">About me</a></li>
+    </ul>
+}
+
+<p>Welcome</p>
+<p>This page is meant to show the things I have done while trying to learn to code <br/>
+    Some of the things here will be from my study and some of it will be made on my own either
+    when I studied or after study was done.</p>
