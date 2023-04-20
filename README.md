@@ -9,6 +9,7 @@
   Added water/beach area for different kinds of healing for hero <br>
   Fixed all monsters in game to have some stats, needs more balancing <br>
   Fixed all zones to have enounters with enemies, 4 enemies for each of the main zones <br>
+  Added more flavour text to zones on map
 - <b>19/4-23</b><br>
   Had to look thru the project to see what needed to be done after taking a longer break due to lots of work in school <br>
   Updated project site with groundwork for graduation project <br>
