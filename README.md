@@ -4,7 +4,7 @@
   Which is a text-based adventure game, it was first programmed on console (AdventureGame here on github) but then transferred to make use of MVC
 
 # Updates
-- 19/4-23 <br>
+- <b>19/4-23</b><br>
   Had to look thru the project to see what needed to be done after taking a longer break due to lots of work in school <br>
   Updated project site with groundwork for graduation project <br>
   Fixed alot of minor things in my code
