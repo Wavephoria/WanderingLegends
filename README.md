@@ -14,8 +14,9 @@
   
 # Planned things to do
 - 
+<br>
+<br>
 
-# <b>Future ideas</b> <br>
 # Main page
 - Fix projects to show pictures and information on what I have done
 - Fix page to look better and fix functionality
