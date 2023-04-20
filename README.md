@@ -13,7 +13,7 @@
   Fixed alot of minor things in my code
   
 # Planned things to do
-- 
+- Make async
 <br>
 <br>
 
