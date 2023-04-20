@@ -4,13 +4,15 @@ namespace WanderingLegends.Models.Monster.MonsterTypes;
 
 public class Skeleton : Monster
 {
+    // Skeletons should pose a little bit of a challenge when fighting
+    // These should also have nothing to drop and give lower exp when beating
     public override string MonsterAttribute { get; init; }
     public override MonsterTypes MonsterType { get; init; } = MonsterTypes.Skeleton;
-    protected override int LifeLower { get; set; } = 35;
-    protected override int LifeHigher { get; set; } = 64;
+    protected override int LifeLower { get; set; } = 45;
+    protected override int LifeHigher { get; set; } = 84;
     public Skeleton(int level) : base(level)
     {
-        Strength *= Modifier;
+        Strength *= Modifier * 2;
         Life = RandomHP() * Modifier;
         MonsterAttribute = RandomAttributes(SkeletonAttributes());
         Name = GetName();
@@ -42,7 +44,7 @@ public class Skeleton : Monster
             "A skeleton.... How??!?",
             "You back to your grave, you pathetic thing!"
         };
-        int choice = randomNumber.Next(1, strings.Length);
+        int choice = randomNumber.Next(0, strings.Length);
         return strings[choice];
     }
 }

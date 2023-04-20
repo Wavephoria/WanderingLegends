@@ -92,47 +92,73 @@ public class WorldMapService
         {
             case "forest":
                 encounter = new Forest();
-                if (randomNumber < 25)
-                    return (null, encounter);
-                else if (randomNumber < 65)
-                    return (new Slime(hero.Level), encounter);
-                return (new Snake(hero.Level), encounter);
-            case "mountain":
-                encounter = new Mountain();
                 if (randomNumber < 35)
                     return (null, encounter);
+                if (randomNumber < 55)
+                    return (new Snake(hero.Level), encounter);
+                if (randomNumber < 85)
+                    return (new Slime(hero.Level), encounter);
+                if (randomNumber < 95)
+                    return (new Troll(hero.Level), encounter);
                 return (new Ogre(hero.Level), encounter);
-            case "deep forest":
-                encounter = new DeepForest();
+            case "mountain":
+                encounter = new Mountain();
                 if (randomNumber < 10)
                     return (null, encounter);
-                else if (randomNumber < 65)
+                if (randomNumber < 50)
+                    return (new Spider(hero.Level), encounter);
+                if (randomNumber < 75)
+                    return (new Goblin(hero.Level), encounter);
+                if (randomNumber < 90)
+                    return (new Gorilla(hero.Level), encounter);
+                return (new Dragon(hero.Level), encounter);
+            case "deep forest":
+                encounter = new DeepForest();
+                if (randomNumber < 20)
+                    return (null, encounter);
+                if (randomNumber < 45)
                     return (new Snake(hero.Level), encounter);
+                if (randomNumber < 70)
+                    return (new Spider(hero.Level), encounter);
+                if (randomNumber < 90)
+                    return (new Troll(hero.Level), encounter);
                 return (new Ogre(hero.Level), encounter);
             case "water":
                 encounter = new Water();
                 return (null, encounter);
             case "grasslands":
                 encounter = new Grasslands();
-                if (randomNumber < 50)
+                if (randomNumber < 40)
                     return (null, encounter);
-                else if (randomNumber < 55)
+                if (randomNumber < 80)
                     return (new Slime(hero.Level), encounter);
-                else if (randomNumber < 60)
+                if (randomNumber < 90)
                     return (new Snake(hero.Level), encounter);
-                else if (randomNumber < 65)
-                    return (new Skeleton(hero.Level), encounter);
-                return (new Ogre(hero.Level), encounter);
+                if (randomNumber < 95)
+                    return (new Wolf(hero.Level), encounter);
+                return (new Skeleton(hero.Level), encounter);
             case "sandlands":
                 encounter = new Sandlands();
-                if (randomNumber < 10)
+                if (randomNumber < 20)
                     return (null, encounter);
+                if (randomNumber < 30)
+                    return (new Slime(hero.Level), encounter);
+                if (randomNumber < 60)
+                    return (new Wolf(hero.Level), encounter);
+                if (randomNumber < 85)
+                    return (new Dingo(hero.Level), encounter);
                 return (new Skeleton(hero.Level), encounter);
             case "hills":
                 encounter = new Hill();
-                if (randomNumber < 50)
+                if (randomNumber < 15)
                     return (null, encounter);
-                return (new Slime(hero.Level), encounter);
+                if (randomNumber < 50)
+                    return (new Skeleton(hero.Level), encounter);
+                if (randomNumber < 80)
+                    return (new Goblin(hero.Level), encounter);
+                if (randomNumber < 90)
+                    return (new Ogre(hero.Level), encounter);
+                return (new Gorilla(hero.Level), encounter);
             case "cave":
                 encounter = new Cave();
                 return (null, encounter);

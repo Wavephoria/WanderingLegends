@@ -7,7 +7,7 @@ public class Slime : Monster
     // Slimes are the basic enemy, low hp, low str, no initiative
     // Early enemy there for level up and some drops
     public override SlimeColor Color { get; init; }
-    public override MonsterTypes MonsterType { get; init; }
+    public override MonsterTypes MonsterType { get; init; } = MonsterTypes.Slime;
     protected override int LifeLower { get; set; } = 10;
     protected override int LifeHigher { get; set; } = 19;
     public Slime(int level) : base(level)
@@ -16,7 +16,6 @@ public class Slime : Monster
         Life = RandomHP() * Modifier;
         Color = RandomColor();
         Name = GetName();
-        MonsterType = MonsterTypes.Slime;
     }
 
     internal override string GetName()
@@ -41,7 +40,7 @@ public class Slime : Monster
             "That one looks weak!!!",
             "Come on, not another one of these!"
         };
-        int choice = randomNumber.Next(1, strings.Length);
+        int choice = randomNumber.Next(0, strings.Length);
         return strings[choice];
     }
 }

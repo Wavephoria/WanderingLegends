@@ -5,6 +5,7 @@ namespace WanderingLegends.Models.Monster.MonsterTypes;
 public class Snake : Monster
 {
     // Snakes have higher hp than slimes but will be around the same str and no initiative
+    // Will drop basic stuff such as potions
     public override string MonsterAttribute { get; init; }
     public override MonsterTypes MonsterType { get; init; } = MonsterTypes.Snake;
     protected override int LifeLower { get; set; } = 21;
@@ -43,7 +44,7 @@ public class Snake : Monster
             "Oh no! I am scared of snakes....",
             "You look so small, can I take you home?"
         };
-        int choice = randomNumber.Next(1, strings.Length);
+        int choice = randomNumber.Next(0, strings.Length);
         return strings[choice];
     }
 }

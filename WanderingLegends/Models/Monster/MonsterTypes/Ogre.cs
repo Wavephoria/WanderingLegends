@@ -12,7 +12,7 @@ public class Ogre : Monster
     protected override int LifeHigher { get; set; } = 110;
     public Ogre(int level) : base(level)
     {
-        Strength += 10 + (Modifier * 2);
+        Strength *= Modifier * 3;
         Life = RandomHP();
         MonsterAttribute = RandomAttributes(OgreAttributes());
         Name = GetName();
@@ -44,7 +44,7 @@ public class Ogre : Monster
             "You see a big shadow looming over your head, you turn around and see.....",
             "You see someone trying to hide behind a tree, too bad he is so big that the tree looks like it is the one hiding"
         };
-        int choice = randomNumber.Next(1, strings.Length);
+        int choice = randomNumber.Next(0, strings.Length);
         return strings[choice];
     }
 }

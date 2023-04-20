@@ -52,12 +52,12 @@ public abstract class Monster : BaseAttributes
     }
     public enum MonsterTypes
     {
-        Slime, Snake, Troll, Ogre, Skeleton
+        Slime, Snake, Troll, Ogre, Skeleton, Dingo, Dragon, Goblin, Gorilla, Spider, Wolf
     }
 
     public enum SlimeColor
     {
-        Blue, Green, Red, White, Black, Purple, Orange, Golden, Silver, Teal
+        Blue, Green, Red, White, Black, Purple, Orange, Golden, Silver, Teal, Brown, Pink, Sandy
     }
 
     public enum MonsterAttributes

@@ -10,8 +10,9 @@ public class WanderingLegendsController : Controller
 {
     private static HeroService _heroService = new();
     private static GameStartVM _gameStartVm = new();
-    
     private static Monster _monster;
+    
+    
     [HttpGet("/Main")]
     public IActionResult Main()
     {
