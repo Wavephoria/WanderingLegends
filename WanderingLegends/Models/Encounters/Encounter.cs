@@ -146,28 +146,54 @@ public class Mountain : Encounter
 {
     public override string FlavourText()
     {
-        return "Cave";
+        text = new List<string>
+        {
+            "The mountains tower overhead, their peaks lost in the clouds",
+            "The climb up the mountain is treacherous, but the views from the summit are breathtaking",
+            "The mountains are a place of extremes, with harsh winds and biting cold",
+            "The rugged terrain and steep slopes make the mountain a challenging climb",
+            "The mountains are home to a variety of wildlife, from surefooted goats to elusive predators.",
+            "The rocky peaks and craggy cliffs offer a dramatic backdrop for any adventure",
+            "The snow-capped peaks glitter in the sunlight, beckoning you to explore",
+            "The mountain streams and waterfalls provide a soothing soundtrack to your ascent",
+            "The thin air at high altitudes can make even the simplest tasks feel like a struggle",
+            "The mountain vistas are awe-inspiring, with endless stretches of wilderness and sky"
+        };
+        return text[random.Next(0, text.Count)];
     }
 }
 public class Road : Encounter
 {
     public override string FlavourText()
     {
-        return "Cave";
+        return "The road seems like a good place to walk!";
     }
 }
 public class Sandlands : Encounter
 {
     public override string FlavourText()
     {
-        return "Cave";
+        text = new List<string>
+        {
+            "The desert stretches out before you, a vast and arid wasteland",
+            "The relentless sun beats down on the desert, making even the sand seem to shimmer",
+            "The desert is home to a variety of wildlife, from camels to venomous snakes",
+            "The shifting sands and endless dunes create a disorienting landscape that is easy to get lost in",
+            "The desert is filled with the sound of silence, broken only by the occasional gust of wind",
+            "The sand dunes offer a challenging but rewarding climb to the top",
+            "The desert is a place of extremes, with scorching heat during the day and freezing cold at night",
+            "The desert is a place of solitude and reflection, with little to distract you from your thoughts",
+            "The desert is a harsh and unforgiving environment, requiring careful planning and preparation",
+            "The desert is a place of stark beauty, with sweeping vistas and unique geological formations"
+        };
+        return text[random.Next(0, text.Count)];
     }
 }
 public class Town : Encounter
 {
     public override string FlavourText()
     {
-        return "Cave";
+        return "Such a nice and peaceful town!";
     }
 }
 public class Water : Encounter
