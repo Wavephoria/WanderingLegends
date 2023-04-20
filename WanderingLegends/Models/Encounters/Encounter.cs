@@ -37,13 +37,16 @@ public abstract class Encounter
             case "town":
                 encounter = new Town();
                 return encounter.FlavourText();
+            case "water":
+                encounter = new Water();
+                return encounter.FlavourText();
         }
         return "Cave";
     }
     public abstract string FlavourText();
 }
 
-public partial class Cave : Encounter
+public class Cave : Encounter
 {
     public override string FlavourText()
     {
@@ -54,7 +57,7 @@ public partial class Cave : Encounter
         return text[0];
     }
 }
-public partial class DeepForest : Encounter
+public class DeepForest : Encounter
 {
     public override string FlavourText()
     {
@@ -74,7 +77,7 @@ public partial class DeepForest : Encounter
         return text[random.Next(0, text.Count)];
     }
 }
-public partial class Forest : Encounter
+public class Forest : Encounter
 {
     public override string FlavourText()
     {
@@ -94,7 +97,7 @@ public partial class Forest : Encounter
         return text[random.Next(0, text.Count)];
     }
 }
-public partial class Grasslands : Encounter
+public class Grasslands : Encounter
 {
     public override string FlavourText()
     {
@@ -119,7 +122,7 @@ public partial class Grasslands : Encounter
         return text[random.Next(0, text.Count)];
     }
 }
-public partial class Hill : Encounter
+public class Hill : Encounter
 {
     public override string FlavourText()
     {
@@ -139,31 +142,38 @@ public partial class Hill : Encounter
         return text[random.Next(0, text.Count)];
     }
 }
-public partial class Mountain : Encounter
+public class Mountain : Encounter
 {
     public override string FlavourText()
     {
         return "Cave";
     }
 }
-public partial class Road : Encounter
+public class Road : Encounter
 {
     public override string FlavourText()
     {
         return "Cave";
     }
 }
-public partial class Sandlands : Encounter
+public class Sandlands : Encounter
 {
     public override string FlavourText()
     {
         return "Cave";
     }
 }
-public partial class Town : Encounter
+public class Town : Encounter
 {
     public override string FlavourText()
     {
         return "Cave";
+    }
+}
+public class Water : Encounter
+{
+    public override string FlavourText()
+    {
+        return "You stand on a beach and look at the water";
     }
 }

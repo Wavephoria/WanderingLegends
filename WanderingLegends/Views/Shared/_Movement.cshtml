@@ -4,8 +4,145 @@
 <br/>
 <br/>
 <p>You take a glance around you:</p>
-<p><a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X-1)" asp-route-y="@Model.hero.Y">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X-1, Model.hero.Y])</a> </p>
-<p><a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y+1)">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y +1])</a></p>
-<p><a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X+1)" asp-route-y="@Model.hero.Y">To the south you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X +1, Model.hero.Y])</a></p>
-<p><a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X-1)" asp-route-y="@(Model.hero.Y-1)">To the west you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y -1])</a></p>
 
+@if (Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y]) != "Water")
+{
+    @if (Model.hero.X == 0 && Model.hero.Y != 0 && Model.hero.Y != 63)
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y + 1)">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y + 1])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X + 1)" asp-route-y="@Model.hero.Y">To the south you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X + 1, Model.hero.Y])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y - 1)">To the west you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y - 1])</a>
+        </p>
+    }
+    @if (Model.hero is { X: 0,Y: 0 })
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y + 1)">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y + 1])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X + 1)" asp-route-y="@Model.hero.Y">To the south you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X + 1, Model.hero.Y])</a>
+        </p>
+    }
+    @if (Model.hero is { X: 0,Y: 63 })
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X + 1)" asp-route-y="@Model.hero.Y">To the south you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X + 1, Model.hero.Y])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y - 1)">To the west you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y - 1])</a>
+        </p>
+    }
+    @if (Model.hero.X == 63 && Model.hero.Y != 0 && Model.hero.Y != 63)
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X - 1)" asp-route-y="@Model.hero.Y">To the north you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X - 1, Model.hero.Y])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y + 1)">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y + 1])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y - 1)">To the west you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y - 1])</a>
+        </p>
+    }
+    @if (Model.hero is { X: 63, Y: 0})
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X - 1)" asp-route-y="@Model.hero.Y">To the north you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X - 1, Model.hero.Y])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y + 1)">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y + 1])</a>
+        </p>
+    }
+    @if (Model.hero is { X: 63, Y: 63})
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X - 1)" asp-route-y="@Model.hero.Y">To the north you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X - 1, Model.hero.Y])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y - 1)">To the west you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y - 1])</a>
+        </p>
+    }
+    @if (Model.hero.Y == 0 && Model.hero.X != 0 && Model.hero.X != 63)
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X - 1)" asp-route-y="@Model.hero.Y">To the north you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X - 1, Model.hero.Y])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y + 1)">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y + 1])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X + 1)" asp-route-y="@Model.hero.Y">To the south you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X + 1, Model.hero.Y])</a>
+        </p>
+    }
+    @if (Model.hero.Y == 63 && Model.hero.X != 0 && Model.hero.X != 63)
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X - 1)" asp-route-y="@Model.hero.Y">To the north you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X - 1, Model.hero.Y])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X + 1)" asp-route-y="@Model.hero.Y">To the south you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X + 1, Model.hero.Y])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y - 1)">To the west you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y - 1])</a>
+        </p>
+    }
+    @if (Model.hero.X != 0 && Model.hero.X != 63 && Model.hero.Y != 0 && Model.hero.Y != 63)
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X - 1)" asp-route-y="@Model.hero.Y">To the north you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X - 1, Model.hero.Y])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y + 1)">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y + 1])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X + 1)" asp-route-y="@Model.hero.Y">To the south you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X + 1, Model.hero.Y])</a>
+        </p>
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y - 1)">To the west you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y - 1])</a>
+        </p>
+    }
+    
+    
+    
+    
+}
+@if (Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y]) == "Water")
+{
+    @if (Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X - 1, Model.hero.Y]) != "Water")
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X - 1)" asp-route-y="@Model.hero.Y">To the north you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X - 1, Model.hero.Y])</a>
+        </p>
+    }
+    @if (Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y + 1]) != "Water")
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y + 1)">To the east you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y + 1])</a>
+        </p>
+    }
+    @if (Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X + 1, Model.hero.Y]) != "Water")
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X + 1)" asp-route-y="@Model.hero.Y">To the south you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X + 1, Model.hero.Y])</a>
+        </p>
+    }
+    @if (Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X - 1, Model.hero.Y - 1]) != "Water")
+    {
+        <p>
+            <a asp-controller="WanderingLegends" asp-action="Encounter" asp-route-x="@(Model.hero.X)" asp-route-y="@(Model.hero.Y - 1)">To the west you have @Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y - 1])</a>
+        </p>
+    }
+}
+
+
+
+
+
+
+@* Need to check for movement outside of map an 
+d if it is water *@

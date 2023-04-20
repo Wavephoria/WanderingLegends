@@ -10,7 +10,16 @@
 
 <strong>@Model.encounter.CheckEncounter(@Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y]))</strong>
 
-
+@if (Model.worldMap.Name(Model.worldMap.MapGrid[Model.hero.X, Model.hero.Y]) == "Water")
+{
+    <p>You feel the soothing calmness of the water splashing right under your legs<br/>
+        You feel that this might be a good time to rest up a little bit, to regain your health
+        and get your focus back.<br/>
+        You want to be ready for what might lay around the corner!<br/>
+    </p>
+    <p>If you have a tent, you can rest up to regain full HP and Focus</p>
+    <p>If you have a picknick basket, you can use it to regain full HP</p>
+}
 
 
 

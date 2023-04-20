@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using WanderingLegends.Models.Encounters;
 using WanderingLegends.Models.Heroes;
 using WanderingLegends.Models.Monster.MonsterTypes;
@@ -58,6 +59,8 @@ public class WorldMapService
                 return "Deep Forest";
             case "W":
                 return "Water";
+            case "WB":
+                return "Water";
             case "G":
                 return "Grasslands";
             case "S":
@@ -107,7 +110,8 @@ public class WorldMapService
                     return (new Snake(hero.Level), encounter);
                 return (new Ogre(hero.Level), encounter);
             case "water":
-                return (null, null);
+                encounter = new Water();
+                return (null, encounter);
             case "grasslands":
                 encounter = new Grasslands();
                 if (randomNumber < 50)
