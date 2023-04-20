@@ -15,18 +15,18 @@
 # Planned things to do
 - 
 
-# Future ideas
-- <b>Main page</b>
+# <b>Future ideas</b> <br>
+# Main page
 - Fix projects to show pictures and information on what I have done
 - Fix page to look better and fix functionality
-- About me
+- About me <br>
 
-- <b>Database, Accounts</b>
+# Database, Accounts
 - Add Database
 - Make so users can save their progress in Wandering Legends
 - Should be able to have more than one hero
 
-- <b>Wandering Legends</b>
+# Wandering Legends
 - Look through how to do with beaches (Maybe change map)
 - Add Towns
 - Fix all zones to include flavour text and monster spawns
@@ -36,11 +36,11 @@
 - Fix more monsters
 - Add backgrounds for zones
 
-- <b>Handbooks</b>
+# Handbooks
 - Monsters handbook to show how and where monsters can spawn
 - Hero handbook to show how and where to change class and level up details
 - Items handbook to show where to find items and what chance to get it
 
-- <b>World Map</b>
+# World Map
 - Make a good illustration of world map for easier see where to go
 
