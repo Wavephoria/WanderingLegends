@@ -13,8 +13,34 @@
   Fixed alot of minor things in my code
   
 # Planned things to do
--
+- 
 
 # Future ideas
--
+- <b>Main page</b>
+- Fix projects to show pictures and information on what I have done
+- Fix page to look better and fix functionality
+- About me
+
+- <b>Database, Accounts</b>
+- Add Database
+- Make so users can save their progress in Wandering Legends
+- Should be able to have more than one hero
+
+- <b>Wandering Legends</b>
+- Look through how to do with beaches (Maybe change map)
+- Add Towns
+- Fix all zones to include flavour text and monster spawns
+- Fix road to include story elements
+- Fix classes for heroes
+- Fix items for heroes (Usable and equipable(Maybe autoequip if better))
+- Fix more monsters
+- Add backgrounds for zones
+
+- <b>Handbooks</b>
+- Monsters handbook to show how and where monsters can spawn
+- Hero handbook to show how and where to change class and level up details
+- Items handbook to show where to find items and what chance to get it
+
+- <b>World Map</b>
+- Make a good illustration of world map for easier see where to go
 
