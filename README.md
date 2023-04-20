@@ -1,4 +1,4 @@
 # WanderingLegends
-Making my own text based adventure game
-
-- Transfering my adventure game made with console to utilize MVC to make it into a web based game
+- This will be my home page with my projects displayed
+- My main project is Wandering Legends
+  Which is a text-based adventure game, which was first programmed on console (AdventureGame here on github) but then transferred to make use of MVC
