@@ -19,11 +19,11 @@
 - Decide how to handle the border with water, use beach or change it
 - Balancing monsters (HP, STR, EXP)
 - Have other things happen in zones other than facing monsters, like take damage from random event or lose something
-- Get database up and running to save progress
-- Money system
+- Get database up and running to save progress and load progress (What is needed to save to database)
+- Money system (Gold and silver)
 - Implement items into the game (Items for healing and items to equip)
 - Fix how to use the road biome properly
-- Build up towns
+- Build up towns (Tavern, Shop, Weaponsmith, Blacksmith)
 - Make caves for harder encounters
 - Monsters handbook and Heroes handbook, implement javascript to be able to click on item to show information on screen
 <br>
