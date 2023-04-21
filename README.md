@@ -18,6 +18,7 @@
 # Planned things to do
 - Decide how to handle the border with water, use beach or change it
 - Balancing monsters (HP, STR, EXP)
+- Have other things happen in zones other than facing monsters, like take damage from random event or lose something
 - Get database up and running to save progress
 - Money system
 - Implement items into the game (Items for healing and items to equip)
