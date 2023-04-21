@@ -16,7 +16,15 @@
   Fixed alot of minor things in my code
   
 # Planned things to do
-- Make async
+- Decide how to handle the border with water, use beach or change it
+- Balancing monsters (HP, STR, EXP)
+- Get database up and running to save progress
+- Money system
+- Implement items into the game (Items for healing and items to equip)
+- Fix how to use the road biome properly
+- Build up towns
+- Make caves for harder encounters
+- Monsters handbook and Heroes handbook, implement javascript to be able to click on item to show information on screen
 <br>
 <br>
 
@@ -31,13 +39,7 @@
 - Should be able to have more than one hero
 
 # Wandering Legends
-- Look through how to do with beaches (Maybe change map)
-- Add Towns
-- Fix all zones to include flavour text and monster spawns
-- Fix road to include story elements
 - Fix classes for heroes
-- Fix items for heroes (Usable and equipable(Maybe autoequip if better))
-- Fix more monsters
 - Add backgrounds for zones
 
 # Handbooks
