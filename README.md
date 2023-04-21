@@ -24,7 +24,7 @@
 - Implement items into the game (Items for healing and items to equip)
 - Fix how to use the road biome properly
 - Build up towns (Tavern, Shop, Weaponsmith, Blacksmith)
-- Make caves for harder encounters
+- Make caves for harder encounters (How to make enemies harder in caves?)
 - Monsters handbook and Heroes handbook, implement javascript to be able to click on item to show information on screen
 <br>
 <br>
